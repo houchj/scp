@@ -3,11 +3,12 @@ using User from '@sap/cds/common';
 using Country from '@sap/cds/common';
 using managed from '@sap/cds/common';
 
-entity Books {
+@Common.Label:'Books from annotation' entity Books {
   key ID : Integer;
-  title  : localized String;
+  @Common.Label: 'Book Title from Annotation' title  : localized String;
   author : Association to Authors;
   stock  : Integer;
+  @Common.ValueList: ['abc', 'def'] test : String;
 }
 
 entity Authors {
