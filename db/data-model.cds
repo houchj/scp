@@ -23,4 +23,3 @@ entity Orders : managed {
   country : Country;
   amount  : Integer;
 }
-
